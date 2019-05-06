@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="title" content="Mehmet Palabıyık - İftar - Sahur Sayacı Scripti">
+	<meta name="description" content="Diyanet saatine göre namaz saatlarini ve sahur ve iftara kalan zamanı görebilirsiniz">
+	<meta name="keywords" content="mehmetp,mehmet palabıyık,kişisel blog,webmaster blogu,ücretsiz oyunlar,ücretsiz oyun indir,steam key, ücretsiz steam key,ücretsiz script indir,script indir,iftar scripti,sahur scripti,iftar sahur sayacı scripti,iftar sahur sayacı scripti indir,">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="language" content="Turkish">
+	<meta name="revisit-after" content="1 days">
+	<meta name="author" content="MehmetP">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Ramazan Sayaç</title>
+
+	
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Menü</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">DJNeon.github.io</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+					<li class="page-scroll">
+                        <a href="#">Link 1</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#">Link 2</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#">Link 3</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Sayac -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-md-6 iftarImsakInfo">
+                            <div class="iftarImsak">
+                                <span class="city"></span> için <span class="text"></span> <span class="clock"><strong></strong></span>
+                            </div>
+                            <div class="cityChange">
+                                <a class="cityChangeButton" href="#">Şehir değiştir</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 selectForm" style="display: none;">
+                            <div class="selectText">
+                                İftar veya sahur saatini öğren:
+                            </div>
+                            <select id="citySelect">
+                                <option value="KAHRAMANMARAŞ">Şehir Seç</option>
+                                <option value="ADANA">Adana</option>
+                                <option value="ADIYAMAN">Adıyaman</option>
+                                <option value="AFYON">Afyon</option>
+                                <option value="AĞRI">Ağrı</option>
+                                <option value="AKSARAY">Aksaray</option>
+                                <option value="AMASYA">Amasya</option>
+                                <option value="ANKARA">Ankara</option>
+                                <option value="ANTALYA">Antalya</option>
+                                <option value="ARDAHAN">Ardahan</option>
+                                <option value="ARTVİN">Artvin</option>
+                                <option value="AYDIN">Aydın</option>
+                                <option value="BALIKESİR">Balıkesir</option>
+                                <option value="BARTIN">Bartın</option>
+                                <option value="BATMAN">Batman</option>
+                                <option value="BAYBURT">Bayburt</option>
+                                <option value="BİLECIK">Bilecik</option>
+                                <option value="BİNGOL">Bingöl</option>
+                                <option value="BİTLİS">Bitlis</option>
+                                <option value="BOLU">Bolu</option>
+                                <option value="BURDUR">Burdur</option>
+                                <option value="BURSA">Bursa</option>
+                                <option value="ÇANAKKALE">Çanakkale</option>
+                                <option value="ÇANKIRI">Çankırı</option>
+                                <option value="ÇORUM">Çorum</option>
+                                <option value="DENİZLİ">Denizli</option>
+                                <option value="DİYARBAKIR">Diyarbakır</option>
+                                <option value="DÜZCE">Düzce</option>
+                                <option value="EDİRNE">Edirne</option>
+                                <option value="ELAZIĞ">Elazığ</option>
+                                <option value="ERZİNCAN">Erzincan</option>
+                                <option value="ERZURUM">Erzurum</option>
+                                <option value="ESKİŞEHIR">Eskişehir</option>
+                                <option value="GAZIANTEP">Gaziantep</option>
+                                <option value="GİRESUN">Giresun</option>
+                                <option value="GÜMÜŞHANE">Gümüşhane</option>
+                                <option value="HAKKARİ">Hakkari</option>
+                                <option value="HATAY">Hatay</option>
+                                <option value="IĞDIR">Iğdır</option>
+                                <option value="ISPARTA">Isparta</option>
+                                <option value="İSTANBUL">İstanbul</option>
+                                <option value="İZMİR">İzmir</option>
+                                <option value="KAHRAMANMARAŞ">Kahramanmaraş</option>
+                                <option value="KARABÜK">Karabük</option>
+                                <option value="KARAMAN">Karaman</option>
+                                <option value="KARS">Kars</option>
+                                <option value="KASTAMONU">Kastamonu</option>
+                                <option value="KAYSERİ">Kayseri</option>
+                                <option value="KIRIKKALE">Kırıkkale</option>
+                                <option value="KIRKLARELİ">Kırklareli</option>
+                                <option value="KIRŞEHİR">Kırşehir</option>
+                                <option value="KİLİS">Kilis</option>
+                                <option value="KOCAELİ">Kocaeli</option>
+                                <option value="KONYA">Konya</option>
+                                <option value="KÜTAHYA">Kütahya</option>
+                                <option value="MALATYA">Malatya</option>
+                                <option value="MANİSA">Manisa</option>
+                                <option value="MARDİN">Mardin</option>
+                                <option value="MERSİN">Mersin</option>
+                                <option value="MUĞLA">Muğla</option>
+                                <option value="MUŞ">Muş</option>
+                                <option value="NEVŞEHİR">Nevşehir</option>
+                                <option value="NİĞDE">Niğde</option>
+                                <option value="ORDU">Ordu</option>
+                                <option value="OSMANİYE">Osmaniye</option>
+                                <option value="RİZE">Rize</option>
+                                <option value="SAKARYA">Sakarya</option>
+                                <option value="SAMSUN">Samsun</option>
+                                <option value="SİİRT">Siirt</option>
+                                <option value="SİNOP">Sinop</option>
+                                <option value="SİVAS">Sivas</option>
+                                <option value="ŞANLIURFA">Şanlıurfa</option>
+                                <option value="ŞIRNAK">Şırnak</option>
+                                <option value="TEKİRDAĞ">Tekirdağ</option>
+                                <option value="TOKAT">Tokat</option>
+                                <option value="TRABZON">Trabzon</option>
+                                <option value="TUNCELİ">Tunceli</option>
+                                <option value="UŞAK">Uşak</option>
+                                <option value="VAN">Van</option>
+                                <option value="YALOVA">Yalova</option>
+                                <option value="YOZGAT">Yozgat</option>
+                                <option value="ZONGULDAK">Zonguldak</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <div id="getCurrentDate"></div>
+                        </div>
+                    </div>
+					<div class="row">
+						<div class="col-md-12 countdownShow">
+                            <div id="countdownContainer">
+                                <div class="countdownFirstText col-md-4">
+                                </div>
+                                <div id="countdown_dashboard" class="col-md-4">
+                                    <div class="hoursContainer">
+                                        <div class="dash hours_dash">
+                                            <div class="digit"></div>
+                                            <div class="digit"></div>
+                                        </div>
+                                        <div class="countdownHour">
+                                            SAAT
+                                        </div>
+                                    </div>
+
+                                    <div class="seperator">
+                                        :
+                                    </div>
+
+                                    <div class="minutesContainer">
+                                        <div class="dash minutes_dash">
+                                            <div class="digit"></div>
+                                            <div class="digit"></div>
+                                        </div>
+                                        <div class="countdownMinute">
+                                            DAKİKA
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="countdownLastText col-md-4">
+                                    KALDI
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="row">
+						<div class="intro-text">
+						<hr class="star-light">
+							<span class="name">NAMAZ VAKİTLERİ</span>
+						</div>
+						
+						<div class="intro-text">
+							<span class="imsakVakti"></span><br>
+							<span class="ogleVakti"></span><br>
+							<span class="ikindiVakti"></span><br>
+							<span class="aksamVakti"></span><br>
+							<span class="yatsiVakti"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+    </header>
+
+    <!-- Footer -->
+	
+    <footer class="text-center">
+        
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Neon 2019
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+	
+	<style>
+#footer-outer{background:#2d2d2d url(http://d1303.hizliresim.com/17/q/lbdlt.png);color:#fff;width:100%;height:247%;clear:both;margin:0;padding:0;float:left;border-top:2px solid #bd423e;font:12px/23px Tahoma, Geneva, sans-serif;}#footer-wrap{margin:0 auto;width:900px;margin-bottom:20.3em;padding:15px 0 10px 0}#footer-wrap .col-c h2{font-size:17px;font-family:arial,sans serif;font-style:normal;font-weight:normal;color:#2eb9f4;margin:0 0 6px 0;padding:10px 0 6px 0;border-bottom:2px solid #444}#footer-wrap .col-c h2 span{color:#aaa}#footer-wrap .col-a h2{font-family:arial,sans serif;font-style:normal;font-weight:normal;font-size:17px;margin:0 0 6px 0;padding:10px 0 6px 0;color:#cb3833;border-bottom:2px solid #444}#footer-wrap .col-a h2 span{color:#aaa}#footer-wrap .col-a{float:left;width:290px;margin-left:12px}#footer-wrap .col-b h2{font-family:arial,sans serif;font-style:normal;font-weight:normal;font-size:17px;margin:0 0 6px 0;padding:10px 0 6px 0;color:#8ccb33;border-bottom:2px solid #444}#footer-wrap .col-b h2 span{color:#aaa}#footer-wrap .col-a{float:left;width:286px;margin-left:9px}#footer-wrap .col-c{float:left;width:285px;margin-left:7px}#footer-wrap .col-b{float:right;width:295px;margin-right:9px}#footer-outer .col-c ul{list-style:none outside none;margin:0;padding:0}#footer-outer .col-c ul li{border-bottom:1px dashed #444;margin:0;list-style-type:none}#footer-outer .col-c ul li span{float:right;margin:-20px 0 0 0;color:#555}#footer-outer .col-c ul li a{border:medium none;color:#888;display:block;line-height:1.5em;margin:0;padding:5px 0;width:98%}#footer-outer .col-c ul li a span{font-family:Verdana,Sans-Serif;font-size:.95em;font-style:italic;font-weight:normal}#footer-outer .col-c ul li a:hover,#footer-outer .col-a ul li a:hover span{color:#f4f4f4}#footer-outer .col-a ul{list-style:none outside none;margin:0;padding:0}#footer-outer .col-a ul li{border-bottom:1px dashed #444;list-style-type:none;margin:0}#footer-outer .col-a ul li span{float:right;margin:-20px 0 0 0;color:#555}#footer-outer .col-a ul li a{border:medium none;color:#888;display:block;line-height:1.5em;margin:0;padding:5px 0;width:98%}#footer-outer .col-a ul li a span{font-family:Verdana,Sans-Serif;font-size:.95em;font-style:italic;font-weight:normal}#footer-outer .col-a ul li a:hover,#footer-outer .col-a ul li a:hover span{color:#f4f4f4}#footer-bottom{clear:both;background:0;margin:0 auto 0 auto;font-family:&#39;Trebuchet MS&#39;,&#39;Helvetica Neue&#39;,Arial,sans-serif;font-size:12px;padding:5px 0;color:#FFF;width:900px}#footer-bottom a{color:#888;font-weight:bold}#footer-bottom a:hover{color:#fff}#footer-bottom .bottom-left{float:left;padding-left:15px}#footer-bottom .bottom-right{text-align:right;padding-right:22px}</style>
+</div><div class='clear' id='footer-outer'>
+<div id='footer-wrap'>
+<div class='col-c'>     
+<h2><b>Dost </b><span><b>Siteler !</b></span></h2>
+<ul>
+<li><a href='https://mehmetpalabiyik.com/'>Mehmet Palabıyık</a><span><img src=''/></span></li>
+<li><a href='https://korkunchikayeler.net/'>Korkunç Hikayeler +18</a><span><img src=''/></span></li>
+<li><a href='https://webtasarim46.org/'>Kahramanmaraş Web Tasarım </a><span><img src=''/></span></li>
+</ul>
+</div>
+<div class='col-a'>
+<h2><b>Dost  </b> <span><b>Siteler:</b></span></h2>
+<ul>
+<li><a href="neondump.gihub.io">Kişisel blog</a></li>
+<li><a href="neondump.github.io">Web Tasarım</a></li>
+<li><a href="spachekingdom.github.io/davetlekazan">Invite Reward</a></li>
+<li><a href="YAKINDA">YAKINDA</a></li>
+<li><a href="YAKINDA">YAKINDA</a></li>
+</ul>
+</div>
+
+
+</font></b></a></b>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+	
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/countdown.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/freelancer.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-63859886-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</body>
+
+</html>
